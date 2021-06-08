@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+
+    h3, p {
+        word-wrap: break-word;
+    }
+
+    .loader-spinner {
+        display: none;
+    }
+
+    .main-container {
+        max-width: 1400px;
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .container {
+    @include container;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .localisation__contenu {
+        display: flex;
+        justify-content: center;
+
+        .text-localisation {
+            margin-left: 10px;
+        }
+    }
+
+    .explorer__contenu {
+        width: 80%;
+        margin: 10px auto;
+        text-align: center;
+
+        &__btn {
+            @include btn;
+    }
+    } 
+
+   
+   
+}
+
+ 
