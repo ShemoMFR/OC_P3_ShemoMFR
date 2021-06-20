@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import "./utils/variables";
+@import "./utils/images";
 @import "./utils/loops";
 @import "./utils/mixins";
-@import "./layout/container";
+@import "./utils/animations";
+@import "./layout/footer";
+@import "./layout/header";
 @import "./pages/index";
+@import "./pages/menus";
+
+
