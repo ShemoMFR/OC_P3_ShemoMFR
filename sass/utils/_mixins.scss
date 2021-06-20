@@ -1,49 +1,44 @@
-@mixin container {
-    width: 100%;
-    padding: 5px;
-}
-
 @mixin btn {
-    height: 3.5rem;
-    width: 70%;
-    margin: 30px auto;
-    background: $degraded-color;
-    border-radius: 1.7rem;
-    box-shadow: $box-shadow;
-    transform: scale(1);
-    transition: transform 200ms ease-in-out;
+  height: 3rem;
+  width: 13.4rem;
+  margin: auto;
+  background: $degraded-color;
+  border-radius: 1.5rem;
+  box-shadow: $box-shadow;
+  transition: all 200ms ease-in-out;
 
-        &:hover {
-            background: linear-gradient(lighten($secondary-color, 3%), lighten($primary-color, 3%));
-            box-shadow: 0px 6px 6px #0000002e;
-            transform: scale(1.07);
-        }
+  a {
+    color: white;
+    height: 100%;
+    width: 100%;
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 6px #0000002e;
+  }
 }
 
-@mixin heart 
-{
-    i
-        {
-            background: transparent;
-            background-clip: text; /* défini jusqu'où sétend l'arrière plan */
-            -webkit-text-fill-color: transparent;
-            -webkit-text-stroke: 1px black;
-            &:hover
-            {
-                background: linear-gradient($primary-color,$secondary-color);
-                -webkit-background-clip: text;
-                -webkit-text-stroke: 1px transparent;
-                animation: apparition 0.5s;
-            }
-        }
-        @keyframes apparition {
-            from 
-            {
-                opacity: 0%;
-            }
-            to 
-            {
-                opacity: 100%;
-            }
-        }
+@mixin heart {
+  i {
+    cursor: pointer;
+    background: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px black;
+    &:hover {
+      background: linear-gradient($primary-color, $secondary-color);
+      -webkit-background-clip: text;
+      -webkit-text-stroke: 1px transparent;
+      animation: remplissage-coeur .5s;
+    }
+  }
 }
