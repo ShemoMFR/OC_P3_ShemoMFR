@@ -1,177 +1,157 @@
-.illustration
-{
-    display: flex;
-    align-items: flex-end;
-    background-size: cover;
-    background-position: center;
-    height: 18.75rem;
-    &__container
-    {
-        width: 100%;
-        background-color: $background-color;
-        font-size: 1.25rem;
-        border-radius: 35px 35px 0px 0px;
-        padding: 2rem 1rem 0rem 1rem;
 
-        @media (min-width: 768px)
-        {
-            display: flex;
-            justify-content: center;
+.illustration {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 220px 65px;
+    &__image {
+      grid-column: 1 / span 2;
+      width: 100%;
+      height: 260px;
+      font-size: 1.25rem;
+      object-fit: cover;
+      @media (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    &__body {
+      grid-column: 1 / span 2;
+      grid-row: 2;
+      background-color: $background-color;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 35px 35px 0px 0px;
+      padding: 1rem 1rem 0rem 1rem;
+      h2 {
+        @media (min-width: 768px) {
+          padding-left: 2.5%;
         }
+      }
+      i {
+        @media (min-width: 768px) {
+          padding-right: 2.5%;
+        }
+      }
+    }
+    @include heart;
+  }
 
-        &__content
-        {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            @media (min-width: 768px)
-            {
-            width: 95%;
+  .menu {
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    &__starter {
+      @media (min-width: 768px) {
+        width: 45%;
+      }
+    }
+    &__main {
+      @media (min-width: 768px) {
+        width: 45%;
+      }
+    }
+    &__dessert {
+      @media (min-width: 768px) {
+        width: 95%;
+      }
+    }
+  }
+  .menu {
+    &__title {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      span {
+        border-bottom: solid #99e2d0 3px;
+      }
+    }
+    &__card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 4rem;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: $box-shadow;
+      overflow: hidden;
+      margin: 0rem 1rem 1rem 1rem;
+      cursor: pointer;
+
+      &:hover {
+        .menu__card__body {
+          width: 80%;
+
+          + .menu__card__body__animation-check {
+            width: 20%;
+            transform: scale(1);
+
+            .fa-check-circle {
+              animation: check-rotate .5s linear both;
             }
+          }
         }
-        @include heart
-    }
-}
+      }
 
-.menu
-{
-    @media (min-width: 768px)
-    {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-    &__starter
-    {
-        @media (min-width: 768px)
-        {
-            width: 45%;
-        }
-    }
-    &__main
-    {
-        @media (min-width: 768px)
-        {
-            width: 45%;
-        }
-    }
-    &__dessert
-    {
-        @media (min-width: 768px)
-        {
-            width: 95%;
-        }
-    }
-}
-.menu
-{
-    &__title
-    {
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        span
-        {
-            border-bottom: solid #99e2d0 3px;
-        }
-    }
-    &__card
-    {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 4rem;
-        background-color: white;
-        border-radius: 15px;
-        box-shadow: $box-shadow;
-        overflow: hidden;
-        margin: 0rem 1rem 1rem 1rem;
-        cursor: pointer;
-        &:active
-        {
-            .menu__card__body
-            {
+      @media (min-width: 768px) {
+        &:hover {
+          .menu__card__body {
             width: 80%;
-                + .menu__card__body__animation-check
-                {
-                    width: 20%;
-                    transform: scale(1);
-                    .fa-check-circle
-                    {
-                        animation: check-rotate 800ms linear;
-                    }
-                }
-            }
+          } 
         }
-        @media (min-width: 768px)
-        {
-            &:hover
-            {
-                .menu__card__body
-                {
-                width: 80%;
-                    + .menu__card__body__animation-check
-                    {
-                        width: 20%;
-                        transform: scale(1);
-                        .fa-check-circle
-                        {
-                            animation: check-rotate 800ms linear;
-                        }
-                    }
-                }
-            }
-        }
-        &__body
-        {
-            width: 100%;
-            transition: all 1s;
-            &__title
-            {
-                padding-left:  1rem;
-            }
-            &__description
-            {
-                display: flex;
-                justify-content: space-between;
-                padding: 0rem 1rem;
-                p
-                {
-                    margin-right: 1rem;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                }
-            }
-            &__animation-check
-            {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100%;
-                width: 0%;
-                background-color: #99e2d0;
-                border-radius: 0px 15px 15px 0px;
-                transform: scale(0,1);
-                transform-origin: right;
-                transition: all 1s;
-                .fa-check-circle
-                {
-                    font-size: 1.5rem;
-                    color: white;
-                }
-            }
-        }
-    }
-}
+      }
 
-.order
-{
+      &__body {
+        width: 100%;
+        transition: all 1s;
+        &__title {
+          padding-left: 1rem;
+        }
+        &__description {
+          display: flex;
+          justify-content: space-between;
+          padding: 0rem 1rem;
+          p {
+            font-size: 0.8rem;
+            margin-right: 1rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          span {
+            font-weight: bold;
+          }
+        }
+
+        &__animation-check {
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          width: 0%;
+          background-color: #99e2d0;
+          border-radius: 0px 15px 15px 0px;
+          transform: scale(0, 1);
+          transform-origin: right;
+          transition: all .5s;
+          
+          .fa-check-circle {
+            font-size: 1.5rem;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  
+  .order {
     margin-top: 2.5rem;
     margin-bottom: 3.5rem;
-    &__button
-    {
-        @include btn;
-    }
-}
-   
 
+    &__button {
+      @include btn;
+    }
+  }
+  
