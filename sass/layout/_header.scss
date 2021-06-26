@@ -6,7 +6,7 @@ header {
   justify-content: center;
   .arrow {
     position: absolute;
-    top: 1.1rem;
+    top: 1.6rem;
     left: 1rem;
     i {
       right: 2rem;
@@ -14,14 +14,6 @@ header {
     }
     @media (min-width: 768px) {
       left: 5%;
-    }
-    .logo {
-      text-align: center;
-      padding: 1rem 0rem 0.5rem 0rem;
-      img {
-        width: 9rem;
-        height: auto;
-      }
     }
   }
 }

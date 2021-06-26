@@ -20,19 +20,29 @@
     color: white;
     font-size: 2rem;
     background: $degraded-color;
-    animation: loader 2s ease-in-out both;
+    animation: loader 2s ease-in-out both; /* apparition layout chargement */
     .fa-spinner {
-      animation: loader-spinner 1s ease-in-out 4 both;
+      animation: loader-spinner 1s ease-in-out 4 both; /* animation loader spinner */
     }
   }
   .index-content {
     background-color: white;
-    animation: content-animation 2s ease-in-out 2s both;
+    animation: content-animation 1s ease-in-out 2s both; /* faire apparaitre le menu après disparition loader */
   }
   .main-container // background à appliquer sur les menus uniquement
   {
     background-color: $background-color;
   }
+
+  .logo {
+    height: 70px;
+    img {
+      width: 180px;
+      padding-top: 10px;
+      height: 70px;
+    }
+  }
+
   h1 {
     font-family: "shrikhand", "times New Roman", Times, serif;
     font-size: 1.25rem;
@@ -43,10 +53,11 @@
     font-size: 1.5rem;
   }
   h3 {
-    font-size: 1.25rem;
+    font-size: 1.7rem;
   }
   h4 {
     font-size: 1rem;
+    font-weight: 500;
   }
   h5 {
     font-size: 1rem;
@@ -58,13 +69,17 @@
     text-decoration: none;
     color: black;
   }
+
+  #subtitle {
+    font-size: 1rem;
+    font-weight: 100;
+  }
   
-  /* SECTION 1 */
   .localisation {
     border-top: 2px #cecece solid;
     box-shadow: inset 0px 1px 5px #cecece;
     background-color: #eaeaea;
-    padding: 1.2rem 0rem;
+    padding: 1rem 0rem;
     font-weight: bold;
     color: #4d4d4d;
     &__contenu {
@@ -202,7 +217,7 @@
       justify-self: flex-end;
       width: 5rem;
       height: 1.9rem;
-      font-size: 0.75rem;
+      font-size: 0.9rem;
       font-weight: bold;
       color: #008766;
       background-color: #99e2d0;
@@ -229,6 +244,12 @@
       margin-left: 1rem;
       h4 {
         margin-bottom: 0.25rem;
+        font-weight: 700;
+        font-size: 1rem;
+      }
+      p {
+        font-weight: 300;
+        font-size: 1rem;
       }
     }
   }

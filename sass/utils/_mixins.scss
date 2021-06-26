@@ -1,6 +1,6 @@
 @mixin btn {
   height: 3rem;
-  width: 13.4rem;
+  width: 12rem;
   margin: auto;
   background: $degraded-color;
   border-radius: 1.5rem;
@@ -19,6 +19,8 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    font-weight: 700;
+    font-size: .9rem;
   }
 
   &:hover {
